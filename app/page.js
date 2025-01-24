@@ -1,3 +1,9 @@
+import LocationDetector from '@/component/LocationDetector';
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <LocationDetector />
+    </div>
+  );
 }
