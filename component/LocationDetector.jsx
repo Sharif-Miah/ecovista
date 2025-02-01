@@ -2,13 +2,11 @@
 'use client';
 
 import Image from 'next/image';
-import { useSearchParams, useRouter, usePathname } from 'next/navigation';
-
+import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 const LocationDetector = () => {
   const [loading, setLoading] = useState(false);
-
   const searchParams = useSearchParams();
   const pathName = usePathname();
   const router = useRouter();
@@ -26,19 +24,18 @@ const LocationDetector = () => {
       });
     }
   }, [pathName, searchParams]);
-
   return (
     <div className='flex flex-col justify-center items-center h-screen bg-slate-700 text-white'>
       {loading && (
         <>
           <Image
             src='/network.gif'
-            alt='Loading...'
+            alt='loading...'
             height={500}
             width={500}
             className='border rounded-md my-4'
           />
-          <p className='text-4xl text-center'>Detecting Location...</p>
+          <p className='text-4xl text-center'>Detection Location</p>
         </>
       )}
     </div>

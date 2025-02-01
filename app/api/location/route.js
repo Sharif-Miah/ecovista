@@ -1,7 +1,7 @@
 import { getLocations } from './location-util';
 
 export async function GET() {
-  const locationData = getLocations();
+  const locationData = await getLocations();
 
   return Response.json(locationData);
 }
