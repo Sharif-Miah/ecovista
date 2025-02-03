@@ -5,11 +5,10 @@ const AQIPage = ({
   searchParams: { latitude, longitude },
 }) => {
   return (
-    // <AQIComponent
-    //   lat={latitude}
-    //   lon={longitude}
-    // />
-    <div>Aqi page</div>
+    <AQIComponent
+      lat={latitude}
+      lon={longitude}
+    />
   );
 };
 
